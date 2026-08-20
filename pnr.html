@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PNR Status - Alfisha Railway</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav class="main-nav">
+
+        <div class="brand">
+            <span class="brand-icon">🚆</span>
+
+            <div>
+                <h1>ALFISHA</h1>
+                <p>RAILWAY RESERVATION</p>
+            </div>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+            <a href="search.html">Book Tickets</a>
+            <a href="index.html#services">Services</a>
+            <a href="pnr.html" class="active">PNR Status</a>
+            <a href="meals.html">Meals</a>
+            <a href="contact.html">Contact Us</a>
+
+            <a href="login.html" class="login-btn">
+                Login / Sign Up
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- PNR PAGE -->
+
+    <main class="background-page">
+
+        <div class="pnr-heading">
+
+            <span>TRAVEL INFORMATION</span>
+
+            <h2>PNR Status</h2>
+
+            <p>
+                View your ticket confirmation and journey details.
+            </p>
+
+        </div>
+
+
+        <!-- TICKET -->
+
+        <div class="ticket">
+
+           <div class="ticket-top">
+
+    <div class="ticket-brand">
+
+        <div class="ticket-icon">
+            🎫
+        </div>
+
+        <div>
+            <h2>Railway E-Ticket</h2>
+            <p>Alfisha Railway Reservation Information System</p>
+        </div>
+
+    </div>
+
+                <div class="confirmed">
+                    ✓ CONFIRMED
+                </div>
+
+            </div>
+
+
+            <div class="pnr-section">
+
+                <span>PNR NUMBER</span>
+
+                <strong id="pnrNumber">---</strong>
+
+            </div>
+
+
+            <!-- JOURNEY -->
+
+            <div class="journey-section">
+
+                <h3>Journey Details</h3>
+
+                <div class="route">
+
+                    <div>
+                        <small>FROM</small>
+                        <strong id="ticketFrom">---</strong>
+                    </div>
+
+                    <div class="arrow">→</div>
+
+                    <div>
+                        <small>TO</small>
+                        <strong id="ticketTo">---</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="journey-info">
+
+                    <div>
+                        <small>TRAIN</small>
+                        <strong id="ticketTrain">---</strong>
+                    </div>
+
+                    <div>
+                        <small>JOURNEY DATE</small>
+                        <strong id="ticketDate">---</strong>
+                    </div>
+
+                    <div>
+                        <small>DEPARTURE</small>
+                        <strong>06:30 AM</strong>
+                    </div>
+
+                    <div>
+                        <small>ARRIVAL</small>
+                        <strong>02:45 PM</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PASSENGER -->
+
+            <div class="passenger-section">
+
+                <h3>Passenger Details</h3>
+
+                <div class="passenger-info">
+
+                    <div>
+                        <small>NAME</small>
+                        <strong id="ticketName">---</strong>
+                    </div>
+
+                    <div>
+                        <small>AGE</small>
+                        <strong id="ticketAge">---</strong>
+                    </div>
+
+                    <div>
+                        <small>GENDER</small>
+                        <strong id="ticketGender">---</strong>
+                    </div>
+
+                    <div>
+                        <small>SEAT</small>
+                        <strong id="ticketSeat">---</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+           <div class="ticket-bottom"><p>
+    Please carry a valid ID proof during your journey.
+</p>
+
+<button class="print-button" onclick="window.print()">
+    🖨 Print Ticket
+</button>
+
+</div></div></main><footer><p>
+    © 2026 Alfisha Railway Reservation Information System
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

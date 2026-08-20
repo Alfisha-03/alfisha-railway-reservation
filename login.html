@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Alfisha Railway</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav class="main-nav">
+
+        <div class="brand">
+            <span class="brand-icon">🚆</span>
+
+            <div>
+                <h1>ALFISHA</h1>
+                <p>RAILWAY RESERVATION</p>
+            </div>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+            <a href="search.html">Book Tickets</a>
+            <a href="index.html#services">Services</a>
+            <a href="pnr.html">PNR Status</a>
+            <a href="meals.html">Meals</a>
+            <a href="contact.html">Contact Us</a>
+
+            <a href="login.html" class="login-btn active">
+                Login / Sign Up
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- LOGIN -->
+
+    <main class="login-page">
+
+    <div class="login-card">
+
+        <!-- LEFT: LOGIN DETAILS -->
+
+        <div class="login-form-area">
+
+            <div class="login-icon">
+                🚆
+            </div>
+
+            <h2>Welcome Back</h2>
+
+            <p class="login-subtitle">
+                Login to your Alfisha Railway account
+            </p>
+
+            <form id="loginForm">
+
+                <div class="login-input">
+
+                    <label>Email / Username</label>
+
+                    <input
+                        type="text"
+                        placeholder="Enter your email or username"
+                        required>
+
+                </div>
+
+                <div class="login-input">
+
+                    <label>Password</label>
+
+                    <input
+                        type="password"
+                        placeholder="Enter your password"
+                        required>
+
+                </div>
+
+                <button type="submit" class="login-submit">
+                    Login
+                </button>
+
+            </form>
+
+            <div class="login-divider">
+                OR
+            </div>
+
+            <button class="signup-btn" onclick="showSignup()">
+                Create New Account
+            </button>
+
+            <p id="loginMessage"></p>
+
+        </div>
+
+
+        <!-- RIGHT: TRAIN IMAGE SLIDER -->
+
+        <div class="login-slider">
+
+            <img
+                id="loginTrainImage"
+                src="images/login-train1.jpg"
+                alt="Train Journey">
+
+            <div class="slider-overlay">
+
+                <span>ALFISHA RAILWAY</span>
+
+                <h3>Travel with comfort.</h3>
+
+                <p>
+                    Your journey begins here.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+    <footer>
+
+        <p>
+            © 2026 Alfisha Railway Reservation Information System
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            document.getElementById("loginMessage").textContent =
+                "Login successful!";
+
+        });
+
+
+        function showSignup() {
+
+            alert("Sign Up page will be available soon.");
+
+        }
+const trainImages = [
+    "images/login-train1.jpg",
+    "images/login-train2.jpg",
+    "images/login-train3.jpg",
+    "images/login-train4.jpg"
+];
+
+let trainIndex = 0;
+
+setInterval(function () {
+
+    trainIndex++;
+
+    if (trainIndex >= trainImages.length) {
+        trainIndex = 0;
+    }
+
+    const image = document.getElementById("loginTrainImage");
+
+    image.style.opacity = "0";
+
+    setTimeout(function () {
+
+        image.src = trainImages[trainIndex];
+
+        image.style.opacity = "1";
+
+    }, 400);
+
+}, 4000);
+
+    </script>
+
+</body>
+
+</html>

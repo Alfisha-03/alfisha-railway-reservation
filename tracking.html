@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Live Train Tracking - Alfisha Railway</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav class="main-nav">
+
+        <div class="brand">
+            <span class="brand-icon">🚆</span>
+
+            <div>
+                <h1>ALFISHA</h1>
+                <p>RAILWAY RESERVATION</p>
+            </div>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+            <a href="search.html">Book Tickets</a>
+            <a href="index.html#services">Services</a>
+            <a href="pnr.html">PNR Status</a>
+            <a href="meals.html">Meals</a>
+            <a href="contact.html">Contact Us</a>
+
+            <a href="login.html" class="login-btn">
+                Login / Sign Up
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- TRACKING -->
+
+    <main class="tracking-page">
+
+        <div class="tracking-heading">
+
+            <span>LIVE TRAIN SERVICE</span>
+
+            <h2>Track Your Train</h2>
+
+            <p>
+                Check the current location and journey status
+                of your train.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="tracking-search">
+
+            <input
+                type="text"
+                id="trainNumber"
+                placeholder="Enter Train Number"
+            >
+
+            <button onclick="trackTrain()">
+                📍 Track Train
+            </button>
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div id="trackingResult" class="tracking-result">
+
+            <div class="live-badge">
+                ● LIVE
+            </div>
+
+            <h3>Vande Bharat Express</h3>
+
+            <p class="train-number">
+                Train No: 20643
+            </p>
+
+
+            <div class="track-line">
+
+                <div class="station completed">
+                    <span>✓</span>
+                    <strong>Chennai</strong>
+                    <small>Departed</small>
+                </div>
+
+
+                <div class="line">
+                    <div class="train-marker">🚆</div>
+                </div>
+
+
+                <div class="station current">
+                    <span>📍</span>
+                    <strong>Bengaluru</strong>
+                    <small>Current Location</small>
+                </div>
+
+
+                <div class="line"></div>
+
+
+                <div class="station">
+                    <span>○</span>
+                    <strong>Hyderabad</strong>
+                    <small>Upcoming</small>
+                </div>
+
+            </div>
+
+
+            <div class="tracking-info">
+
+                <div>
+                    <small>STATUS</small>
+                    <strong>On Time</strong>
+                </div>
+
+                <div>
+                    <small>LAST UPDATED</small>
+                    <strong>Just Now</strong>
+                </div>
+
+                <div>
+                    <small>NEXT STOP</small>
+                    <strong>Hyderabad</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Alfisha Railway Reservation Information System
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        function trackTrain() {
+
+            const trainNumber =
+                document.getElementById("trainNumber").value;
+
+            if (trainNumber === "") {
+
+                alert("Please enter a train number.");
+
+                return;
+            }
+
+            document.getElementById("trackingResult").style.display = "block";
+
+        }
+
+    </script>
+<script src="script.js"></script>
+</body>
+
+</html>

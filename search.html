@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Search Trains - Alfisha Railway Reservation System
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<nav class="main-nav">
+
+    <div class="brand">
+
+        <span class="brand-icon">🚆</span>
+
+        <div>
+            <h1>ALFISHA</h1>
+            <p>RAILWAY RESERVATION</p>
+        </div>
+
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="search.html" class="active">
+            Book Tickets
+        </a>
+
+        <a href="services.html">
+            Services
+        </a>
+
+        <a href="pnr.html">
+            PNR Status
+        </a>
+
+        <a href="meals.html">
+            Meals
+        </a>
+
+        <a href="contact.html">
+            Contact Us
+        </a>
+
+        <a href="login.html" class="login-btn">
+            Login / Sign Up
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- TRAIN IMAGES BELOW NAVIGATION -->
+
+<header class="train-image-header">
+
+    <img
+        id="titleTrainImage"
+        src="images/railway.jpg"
+        alt="Railway Train">
+
+</header>
+
+
+<main>
+
+    <div class="booking-hero">
+
+
+        <!-- IMAGE -->
+
+        <div class="booking-image">
+
+            <img
+                src="images/railway1.jpg"
+                alt="Railway Journey">
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="booking-content">
+
+            <span>
+                PLAN YOUR JOURNEY
+            </span>
+
+            <h2>
+                Search Available Trains
+            </h2>
+
+            <p>
+                Find the right train and start your journey
+                with Alfisha Railway.
+            </p>
+
+
+            <form
+                id="trainSearchForm"
+                class="search-form">
+
+
+                <div class="input-group">
+
+                    <label for="fromStation">
+                        From
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fromStation"
+                        placeholder="Enter departure station"
+                        required>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="toStation">
+                        To
+                    </label>
+
+                    <input
+                        type="text"
+                        id="toStation"
+                        placeholder="Enter destination station"
+                        required>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="journeyDate">
+                        Journey Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="journeyDate"
+                        required>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="travelClass">
+                        Class
+                    </label>
+
+                    <select id="travelClass">
+
+                        <option>
+                            Sleeper (SL)
+                        </option>
+
+                        <option>
+                            AC 3 Tier (3A)
+                        </option>
+
+                        <option>
+                            AC 2 Tier (2A)
+                        </option>
+
+                        <option>
+                            First AC (1A)
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button type="submit">
+
+                    🔍 Search Trains
+
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- RESULTS APPEAR HERE -->
+
+    <div id="trainResults"></div>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 Alfisha Railway Reservation System
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

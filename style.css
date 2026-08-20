@@ -1,0 +1,4785 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef3f5;
+    color: #24313a;
+}
+
+/* Header */
+
+header {
+    background-color: #17324d;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* Navigation */
+
+nav {
+    background-color: #245b7a;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #c9dfe0;
+}
+
+/* Main */
+
+main {
+    width: 85%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+/* Hero */
+
+.hero {
+    text-align: center;
+    padding: 55px 30px;
+    margin-bottom: 35px;
+    border-radius: 14px;
+    background-color: #dce8ec;
+}
+
+.hero h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+    color: #17324d;
+}
+
+.hero p {
+    font-size: 17px;
+    color: #49616d;
+}
+
+/* Search */
+
+main > h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-form {
+    background-color: #f8fafa;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(23, 50, 77, 0.12);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #245b7a;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b8c8ce;
+    border-radius: 7px;
+    font-size: 15px;
+    background-color: #ffffff;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: #3d7c7a;
+}
+
+/* Search button */
+
+.search-form button {
+    grid-column: 1 / -1;
+    width: 210px;
+    margin: auto;
+    background-color: #3d7c7a;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-form button:hover {
+    background-color: #326866;
+}
+
+/* Popular trains */
+
+.popular-trains {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.popular-trains h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #17324d;
+}
+
+.train-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.train-card {
+    background-color: #f8fafa;
+    width: 280px;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #d3dfe3;
+    box-shadow: 0 4px 12px rgba(23, 50, 77, 0.1);
+}
+
+.train-card h3 {
+    color: #245b7a;
+    margin-bottom: 12px;
+}
+
+.train-card p {
+    margin-bottom: 10px;
+    color: #596b73;
+}
+
+.train-card button {
+    margin-top: 10px;
+    background-color: #3d7c7a;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    background-color: #17324d;
+    color: #dce8ec;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Search message */
+
+#searchMessage {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.train-card button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #3d7c7a;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.train-card button:hover {
+    background-color: #326866;
+}
+.hero {
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(rgba(23, 50, 77, 0.72),
+                        rgba(23, 50, 77, 0.72)),
+        url("images/railway.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+}
+
+.hero-content h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.hero-content p {
+    color: #e1eeee;
+    font-size: 17px;
+}
+#trainResults {
+    margin-top: 35px;
+}
+
+.train-result {
+    background-color: #f8fafa;
+    border: 1px solid #d3dfe3;
+    border-left: 5px solid #3d7c7a;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(23, 50, 77, 0.1);
+}
+
+.train-result h3 {
+    color: #17324d;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.train-result p {
+    margin: 8px 0;
+    color: #53666f;
+}
+
+.train-result button {
+    margin-top: 15px;
+    width: 150px;
+    padding: 11px;
+    background-color: #3d7c7a;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.train-result button:hover {
+    background-color: #326866;
+}
+.seat-info {
+    background-color: #dce8ec;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 25px 0;
+    text-align: center;
+}
+
+.seat-info h3 {
+    color: #17324d;
+    margin-bottom: 8px;
+}
+
+.seat-layout {
+    width: 450px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #f8fafa;
+    border: 1px solid #d3dfe3;
+    border-radius: 12px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 35px 1fr 1fr;
+    gap: 12px;
+    align-items: center;
+}
+
+.seat {
+    padding: 12px 5px;
+    text-align: center;
+    background-color: #dce8ec;
+    border: 1px solid #3d7c7a;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.seat:hover {
+    background-color: #bcd4d5;
+}
+
+.seat.booked {
+    background-color: #9aa8ae;
+    color: white;
+    border-color: #9aa8ae;
+    cursor: not-allowed;
+}
+
+.aisle {
+    height: 10px;
+}
+
+.seat-note {
+    text-align: center;
+    margin: 20px;
+}
+
+.seat-note span {
+    margin: 0 15px;
+}
+
+.booked-note {
+    color: #6f7d83;
+}
+
+#continueBooking {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 35px;
+    background-color: #3d7c7a;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.seat.selected {
+    background-color: #3d7c7a;
+    color: white;
+    border-color: #245b7a;
+    transform: scale(1.05);
+}
+.booking-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: #f8fafa;
+    padding: 35px;
+    border-radius: 14px;
+    border: 1px solid #d3dfe3;
+    box-shadow: 0 5px 18px rgba(23, 50, 77, 0.12);
+}
+
+#passengerForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#passengerForm button {
+    width: 220px;
+    margin: 10px auto 0;
+    padding: 13px;
+    background-color: #3d7c7a;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#passengerForm button:hover {
+    background-color: #326866;
+}
+/* ===============================
+   PNR TICKET
+   =============================== */
+
+.ticket {
+    max-width: 850px;
+    margin: 40px auto;
+    background-color: #f8fafa;
+    border: 1px solid #cbd9de;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(23, 50, 77, 0.15);
+}
+
+.ticket-top {
+    background-color: #17324d;
+    color: white;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket-top h2 {
+    margin-bottom: 6px;
+}
+
+.ticket-top p {
+    color: #dce8ec;
+}
+
+.confirmed {
+    background-color: #3d7c7a;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.pnr-section {
+    text-align: center;
+    padding: 25px;
+    background-color: #dce8ec;
+}
+
+.pnr-section span {
+    display: block;
+    font-size: 13px;
+    color: #526872;
+    margin-bottom: 7px;
+}
+
+.pnr-section strong {
+    font-size: 28px;
+    color: #17324d;
+}
+
+.journey-section,
+.passenger-section {
+    padding: 28px 30px;
+    border-bottom: 1px solid #d3dfe3;
+}
+
+.journey-section h3,
+.passenger-section h3 {
+    color: #17324d;
+    margin-bottom: 22px;
+}
+
+.route {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    margin-bottom: 30px;
+}
+
+.route div {
+    text-align: center;
+}
+
+.route small,
+.journey-info small,
+.passenger-info small {
+    display: block;
+    color: #687a82;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.route strong {
+    font-size: 21px;
+    color: #245b7a;
+}
+
+.arrow {
+    font-size: 28px;
+    color: #3d7c7a;
+}
+
+.journey-info,
+.passenger-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.journey-info strong,
+.passenger-info strong {
+    color: #24313a;
+}
+
+.ticket-bottom {
+    padding: 22px 30px;
+    text-align: center;
+}
+
+.ticket-bottom p {
+    color: #687a82;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.print-button {
+    width: 180px;
+    padding: 12px;
+    background-color: #3d7c7a;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.print-button:hover {
+    background-color: #326866;
+}
+.booking-card {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #f8fafa;
+    border: 1px solid #cbd9de;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(23, 50, 77, 0.12);
+}
+
+.booking-card h3 {
+    color: #17324d;
+    margin-bottom: 15px;
+}
+
+.booking-card p {
+    margin: 9px 0;
+    color: #526872;
+}
+
+.booking-card strong {
+    color: #17324d;
+}
+
+.booking-confirmed {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 14px;
+    background-color: #3d7c7a;
+    color: white;
+    border-radius: 6px;
+}
+/* =========================================
+   NEW HOME PAGE DESIGN
+   ========================================= */
+
+.main-nav {
+    min-height: 78px;
+    padding: 12px 6%;
+    background: #102a43;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+}
+
+.brand-icon {
+    font-size: 34px;
+}
+
+.brand h1 {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.brand p {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #b9d4df;
+    margin-top: 3px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links a {
+    color: #eaf3f6;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 7px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: #2f6f7e;
+    color: white;
+}
+
+
+/* HERO */
+
+.home-hero {
+    min-height: 500px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 30, 48, 0.88),
+            rgba(8, 30, 48, 0.52),
+            rgba(8, 30, 48, 0.25)
+        ),
+        url("images/railway.jpg");
+
+    background-size: cover;
+    background-position: center;
+background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    width: 100%;
+}
+
+.hero-text {
+    width: 88%;
+    max-width: 1150px;
+    margin: auto;
+    color: white;
+    padding: 70px 0;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 7px 12px;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 20px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero-text h2 {
+    font-size: clamp(38px, 5vw, 65px);
+    line-height: 1.05;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+.hero-text h2 span {
+    color: #b9dfe0;
+}
+
+.hero-text p {
+    max-width: 520px;
+    color: #e2edf0;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* JOURNEY SEARCH */
+
+.journey-section {
+    position: relative;
+    margin-top: -75px;
+    padding: 0 6%;
+    z-index: 5;
+}
+
+.journey-card {
+    max-width: 1150px;
+    margin: auto;
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(15, 42, 60, 0.18);
+}
+
+.journey-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.journey-heading > span {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    background: #e5f0f1;
+    border-radius: 10px;
+}
+
+.journey-heading h2 {
+    color: #102a43;
+    font-size: 21px;
+}
+
+.journey-heading p {
+    color: #71828b;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+.modern-search {
+    display: grid;
+    grid-template-columns: 1.3fr 35px 1.3fr 1fr 1fr auto;
+    align-items: center;
+    gap: 12px;
+}
+
+.station-field,
+.date-field,
+.class-field {
+    min-height: 70px;
+    border: 1px solid #d5e0e4;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fbfcfc;
+}
+
+.field-icon {
+    font-size: 12px;
+    color: #397c7d;
+}
+
+.to-icon {
+    color: #d18b48;
+}
+
+.station-field label,
+.date-field label,
+.class-field label {
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #71828b;
+    margin-bottom: 5px;
+}
+
+.station-field input,
+.date-field input,
+.class-field select {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    color: #17324d;
+    font-size: 14px;
+}
+
+.route-line {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #d5e0e4;
+    border-radius: 50%;
+    color: #397c7d;
+    background: white;
+}
+
+.search-train-btn {
+    height: 52px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 9px;
+    background: #2f6f7e;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.2s;
+}
+
+.search-train-btn:hover {
+    background: #245968;
+    transform: translateY(-1px);
+}
+
+
+/* SECTIONS */
+
+.services-section,
+.popular-section {
+    width: 88%;
+    max-width: 1150px;
+    margin: 80px auto 0;
+}
+
+.section-heading {
+    margin-bottom: 28px;
+}
+
+.section-heading > span {
+    color: #397c7d;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    color: #102a43;
+    font-size: 30px;
+    margin-top: 8px;
+}
+
+
+/* SERVICES */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.service-card {
+    text-decoration: none;
+    color: inherit;
+    background: #e7f1f2;
+    border: 1px solid #dce5e8;
+    border-radius: 12px;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(16, 42, 67, 0.12);
+}
+
+.service-icon {
+    min-width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    background: #e7f1f2;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.service-card h3 {
+    color: #17324d;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.service-card p {
+    color: #7a8990;
+    font-size: 12px;
+}
+
+.service-arrow {
+    margin-left: auto;
+    color: #397c7d;
+    font-size: 18px;
+}
+
+
+/* POPULAR TRAINS */
+
+.modern-trains {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.modern-train-card {
+    overflow: hidden;
+    background: white;
+    border: 1px solid #dce5e8;
+    border-radius: 14px;
+    transition: 0.2s;
+}
+
+.modern-train-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(16, 42, 67, 0.13);
+}
+
+.train-image-placeholder {
+    height: 145px;
+    display: grid;
+    place-items: center;
+    font-size: 60px;
+    background: linear-gradient(135deg, #dcebee, #f3f7f8);
+}
+
+.train-card-content {
+    padding: 18px;
+}
+
+.train-type {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: #397c7d;
+    font-weight: bold;
+}
+
+.train-card-content h3 {
+    color: #17324d;
+    font-size: 19px;
+    margin: 8px 0;
+}
+
+.train-card-content > p {
+    color: #697a82;
+    font-size: 13px;
+}
+
+.train-info {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.train-info span {
+    padding: 6px 9px;
+    border-radius: 6px;
+    background: #eef4f5;
+    color: #526872;
+    font-size: 10px;
+}
+
+
+/* WHY SECTION */
+
+.why-section {
+    margin-top: 90px;
+    padding: 70px 8%;
+    background: #102a43;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.why-content > span {
+    color: #9dc9cb;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.why-content h2 {
+    font-size: 38px;
+    line-height: 1.15;
+    margin: 15px 0;
+}
+
+.why-content p {
+    max-width: 500px;
+    color: #c7d6dc;
+    line-height: 1.7;
+}
+
+.benefits {
+    display: grid;
+    gap: 25px;
+}
+
+.benefits > div {
+    border-left: 2px solid #4c8b91;
+    padding-left: 20px;
+}
+
+.benefits strong {
+    color: #8fc6c8;
+    font-size: 12px;
+}
+
+.benefits h3 {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.benefits p {
+    color: #b9cbd2;
+    font-size: 13px;
+}
+
+
+/* FOOTER */
+
+.modern-footer {
+    padding: 35px 8%;
+    background: #081e30;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.modern-footer h2 {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.modern-footer p {
+    color: #aebfc7;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .main-nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .modern-search {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .route-line {
+        display: none;
+    }
+
+    .search-train-btn {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .modern-trains {
+        grid-template-columns: 1fr;
+    }
+
+    .why-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .home-hero {
+        min-height: 430px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text h2 {
+        font-size: 38px;
+    }
+
+    .modern-search {
+        grid-template-columns: 1fr;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-section {
+        margin-top: -40px;
+    }
+
+    .journey-card {
+        padding: 20px;
+    }
+
+    .why-section {
+        padding: 55px 7%;
+    }
+
+    .why-content h2 {
+        font-size: 30px;
+    }
+
+    .modern-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* Popular Journey Boxes */
+
+.journey-route {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 18px 0;
+    font-weight: bold;
+    color: #17324d;
+}
+
+.route-arrow {
+    font-size: 22px;
+    color: #3d7c7a;
+}
+
+.train-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.train-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(23, 50, 77, 0.18);
+}
+/* Login / Sign Up Button */
+
+.login-btn {
+    background-color: #245b7a;
+    color: white !important;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: 1px solid #3d7c7a;
+}
+
+.login-btn:hover {
+    background-color: #3d7c7a;
+    color: white !important;
+}
+/* ===============================
+   POPULAR TRAIN CARDS
+================================ */
+
+.modern-train-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #d5e1e5;
+    box-shadow: 0 5px 18px rgba(23, 50, 77, 0.10);
+    transition: 0.3s ease;
+}
+
+.modern-train-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(23, 50, 77, 0.18);
+}
+
+.train-image-placeholder {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #dce8ec,
+        #eef4f5
+    );
+
+    font-size: 60px;
+}
+
+.train-card-content {
+    padding: 24px;
+}
+
+.train-type {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+
+    background-color: #e4f0f1;
+    color: #397c7d;
+
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.train-card-content h3 {
+    margin: 12px 0 8px;
+    color: #17324d;
+    font-size: 20px;
+}
+
+.train-card-content > p {
+    color: #526872;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.train-info {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+
+.train-info span {
+    background-color: #f0f5f6;
+    color: #596b73;
+    padding: 7px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+}
+/* ===============================
+   JOURNEY DETAILS
+================================ */
+
+.train-card-content > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    background-color: #f1f6f7;
+    padding: 12px;
+    border-radius: 8px;
+
+    color: #245b7a;
+    font-weight: bold;
+}
+
+.train-card-content > p::before {
+    content: "📍";
+}
+
+.train-card-content > p::after {
+    content: "🚉";
+}
+
+
+/* Card spacing */
+
+.modern-train-card {
+    min-height: 340px;
+}
+
+
+/* Small divider */
+
+.train-card-content {
+    border-top: 3px solid #3d7c7a;
+}
+/* ===============================
+   LIVE TRAIN TRACKING
+================================ */
+
+.tracking-page {
+    width: 85%;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.tracking-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tracking-heading > span {
+    color: #3d7c7a;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.tracking-heading h2 {
+    color: #17324d;
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.tracking-heading p {
+    color: #687a82;
+}
+
+
+/* Search box */
+
+.tracking-search {
+    max-width: 650px;
+    margin: 0 auto 35px;
+
+    display: flex;
+    gap: 12px;
+
+    background: white;
+    padding: 18px;
+
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(23, 50, 77, 0.12);
+}
+
+.tracking-search input {
+    flex: 1;
+    padding: 13px;
+
+    border: 1px solid #cbd9de;
+    border-radius: 7px;
+
+    font-size: 15px;
+}
+
+.tracking-search input:focus {
+    outline: none;
+    border-color: #3d7c7a;
+}
+
+.tracking-search button {
+    padding: 13px 22px;
+
+    background-color: #3d7c7a;
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.tracking-search button:hover {
+    background-color: #326866;
+}
+
+
+/* Tracking result */
+
+.tracking-result {
+    background: white;
+
+    border: 1px solid #d3dfe3;
+    border-radius: 15px;
+
+    padding: 30px;
+
+    box-shadow: 0 6px 20px rgba(23, 50, 77, 0.12);
+}
+
+.live-badge {
+    display: inline-block;
+
+    background-color: #e4f0ed;
+    color: #3d7c7a;
+
+    padding: 6px 12px;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tracking-result h3 {
+    color: #17324d;
+    font-size: 24px;
+    margin: 15px 0 5px;
+}
+
+.train-number {
+    color: #687a82;
+}
+
+
+/* Journey line */
+
+.track-line {
+    display: flex;
+    align-items: center;
+
+    margin: 45px 0;
+
+    gap: 10px;
+}
+
+.station {
+    min-width: 120px;
+    text-align: center;
+}
+
+.station span {
+    display: block;
+    font-size: 24px;
+    color: #9aa8ae;
+    margin-bottom: 8px;
+}
+
+.station strong {
+    display: block;
+    color: #17324d;
+}
+
+.station small {
+    color: #687a82;
+}
+
+.station.completed span,
+.station.current span {
+    color: #3d7c7a;
+}
+
+.line {
+    flex: 1;
+    height: 4px;
+    background-color: #cbd9de;
+    position: relative;
+}
+
+.train-marker {
+    position: absolute;
+    top: -20px;
+    left: 45%;
+
+    font-size: 28px;
+}
+
+
+/* Information boxes */
+
+.tracking-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.tracking-info div {
+    background-color: #eef4f5;
+
+    padding: 18px;
+    border-radius: 9px;
+
+    text-align: center;
+}
+
+.tracking-info small {
+    display: block;
+
+    color: #687a82;
+    font-size: 11px;
+
+    margin-bottom: 7px;
+}
+
+.tracking-info strong {
+    color: #17324d;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .tracking-search {
+        flex-direction: column;
+    }
+
+    .track-line {
+        flex-direction: column;
+    }
+
+    .line {
+        width: 4px;
+        height: 50px;
+    }
+
+    .tracking-info {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ===============================
+   MEALS PAGE
+================================ */
+
+.meals-page {
+    width: 85%;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.meals-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.meals-heading > span {
+    color: #3d7c7a;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.meals-heading h2 {
+    color: #17324d;
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.meals-heading p {
+    color: #687a82;
+}
+
+.meal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.meal-card {
+    background-color: #ffffff;
+    border: 1px solid #d3dfe3;
+    border-radius: 14px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(23, 50, 77, 0.10);
+    transition: 0.3s ease;
+}
+
+.meal-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(23, 50, 77, 0.16);
+}
+
+.meal-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.meal-card h3 {
+    color: #17324d;
+    margin-bottom: 10px;
+}
+
+.meal-card p {
+    color: #687a82;
+    font-size: 14px;
+    min-height: 42px;
+}
+
+.meal-card strong {
+    display: block;
+    color: #245b7a;
+    font-size: 20px;
+    margin: 18px 0;
+}
+
+.meal-card button {
+    width: 100%;
+    padding: 11px;
+
+    background-color: #3d7c7a;
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.meal-card button:hover {
+    background-color: #326866;
+}
+
+@media (max-width: 800px) {
+    .meal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .meal-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ===============================
+   CONTACT PAGE
+================================ */
+
+.contact-page {
+    width: 85%;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.contact-heading > span {
+    color: #3d7c7a;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.contact-heading h2 {
+    color: #17324d;
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.contact-heading p {
+    color: #687a82;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.contact-info,
+.contact-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border: 1px solid #d3dfe3;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(23, 50, 77, 0.10);
+}
+
+.contact-info h3,
+.contact-form h3 {
+    color: #17324d;
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+    color: #687a82;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-top: 1px solid #e1e8ea;
+}
+
+.contact-item > span {
+    font-size: 25px;
+}
+
+.contact-item small {
+    display: block;
+    color: #687a82;
+    margin-bottom: 5px;
+}
+
+.contact-item strong {
+    color: #245b7a;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #cbd9de;
+    border-radius: 7px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #3d7c7a;
+}
+
+.contact-form button {
+    padding: 12px;
+
+    background-color: #3d7c7a;
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.contact-form button:hover {
+    background-color: #326866;
+}
+
+#contactMessage {
+    text-align: center;
+    color: #3d7c7a;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+@media (max-width: 700px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ===============================
+   LOGIN PAGE
+================================ */
+
+.login-page {
+    min-height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+
+    background-color: #ffffff;
+
+    padding: 35px;
+
+    border: 1px solid #d3dfe3;
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(23, 50, 77, 0.12);
+}
+
+.login-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.login-card h2 {
+    color: #17324d;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.login-subtitle {
+    color: #687a82;
+    margin-bottom: 28px;
+}
+
+.login-input {
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.login-input label {
+    display: block;
+    color: #245b7a;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.login-input input {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #cbd9de;
+    border-radius: 7px;
+
+    font-size: 14px;
+}
+
+.login-input input:focus {
+    outline: none;
+    border-color: #3d7c7a;
+}
+
+.login-submit,
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+
+    border: none;
+    border-radius: 7px;
+
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.login-submit {
+    background-color: #3d7c7a;
+    color: white;
+}
+
+.login-submit:hover {
+    background-color: #326866;
+}
+
+.login-divider {
+    margin: 22px 0;
+    color: #9aa8ae;
+    font-size: 13px;
+}
+
+.signup-btn {
+    background-color: #eef3f5;
+    color: #245b7a;
+    border: 1px solid #cbd9de;
+}
+
+.signup-btn:hover {
+    background-color: #dce8ec;
+}
+
+#loginMessage {
+    color: #3d7c7a;
+    font-weight: bold;
+    margin-top: 18px;
+}
+/* ===============================
+   PNR STATUS PAGE
+================================ */
+
+.pnr-page {
+    width: 90%;
+    max-width: 1000px;
+    margin: 45px auto 60px;
+}
+
+.pnr-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.pnr-heading > span {
+    color: #3d7c7a;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.pnr-heading h2 {
+    color: #17324d;
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.pnr-heading p {
+    color: #687a82;
+    font-size: 15px;
+}
+
+
+/* Ticket */
+
+.ticket {
+    max-width: 900px;
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid #d3dfe3;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(23, 50, 77, 0.12);
+}
+
+
+/* Ticket Header */
+
+.ticket-top {
+    background-color: #17324d;
+    color: white;
+    padding: 24px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.ticket-top h2 {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.ticket-top p {
+    color: #dce8ec;
+    font-size: 13px;
+}
+
+
+/* Confirmed */
+
+.confirmed {
+    background-color: #3d7c7a;
+    color: white;
+
+    padding: 9px 15px;
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* PNR */
+
+.pnr-section {
+    text-align: center;
+    padding: 24px;
+    background-color: #eef4f5;
+    border-bottom: 1px solid #d3dfe3;
+}
+
+.pnr-section span {
+    display: block;
+    color: #687a82;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+}
+
+.pnr-section strong {
+    color: #17324d;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+
+/* Sections */
+
+.journey-section,
+.passenger-section {
+    padding: 28px 35px;
+    border-bottom: 1px solid #d3dfe3;
+}
+
+.journey-section h3,
+.passenger-section h3 {
+    color: #17324d;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+
+/* Route */
+
+.route {
+    display: grid;
+    grid-template-columns: 1fr 70px 1fr;
+    align-items: center;
+
+    text-align: center;
+
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+.route small {
+    display: block;
+    color: #687a82;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.route strong {
+    color: #245b7a;
+    font-size: 21px;
+}
+
+.arrow {
+    color: #3d7c7a;
+    font-size: 28px;
+}
+
+
+/* Details */
+
+.journey-info,
+.passenger-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.journey-info div,
+.passenger-info div {
+    background-color: #f5f8f9;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 70px;
+}
+
+.journey-info small,
+.passenger-info small {
+    display: block;
+    color: #687a82;
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.journey-info strong,
+.passenger-info strong {
+    color: #24313a;
+    font-size: 14px;
+}
+
+
+/* Bottom */
+
+.ticket-bottom {
+    text-align: center;
+    padding: 25px;
+}
+
+.ticket-bottom p {
+    color: #687a82;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.print-button {
+    width: 180px;
+    padding: 12px;
+
+    background-color: #3d7c7a;
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.print-button:hover {
+    background-color: #326866;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .ticket-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .journey-info,
+    .passenger-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .route {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .journey-info,
+    .passenger-info {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-section,
+    .passenger-section {
+        padding: 22px 18px;
+    }
+
+}
+/* ===============================
+   POPULAR TRAIN SERVICES
+================================ */
+
+.popular-section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 60px auto;
+}
+
+.popular-section .section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.popular-section .section-heading > span {
+    color: #3d7c7a;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.popular-section .section-heading h2 {
+    color: #17324d;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.popular-section .section-heading p {
+    color: #687a82;
+    font-size: 15px;
+}
+
+.modern-trains {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.modern-train-card {
+    background: #ffffff;
+    border: 1px solid #d3dfe3;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(23, 50, 77, 0.10);
+    transition: 0.3s ease;
+}
+
+.modern-train-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(23, 50, 77, 0.15);
+}
+
+.train-image-placeholder {
+    height: 130px;
+    background: #dce8ec;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 55px;
+}
+
+.train-card-content {
+    padding: 22px;
+}
+
+.train-type {
+    color: #3d7c7a;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.train-card-content h3 {
+    color: #17324d;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.train-route {
+    color: #596b73;
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.train-route span {
+    color: #3d7c7a;
+    font-weight: bold;
+    margin: 0 8px;
+}
+
+.train-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 12px 0;
+    border-top: 1px solid #e1e8ea;
+    border-bottom: 1px solid #e1e8ea;
+
+    color: #687a82;
+    font-size: 12px;
+}
+
+.train-view-btn {
+    display: block;
+    text-align: center;
+
+    margin-top: 18px;
+    padding: 11px;
+
+    background-color: #3d7c7a;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.train-view-btn:hover {
+    background-color: #326866;
+}
+
+@media (max-width: 800px) {
+    .modern-trains {
+        grid-template-columns: 1fr;
+    }
+}
+/* ===============================
+   TRAIN IMAGES
+================================ */
+
+.train-image-placeholder {
+    height: 170px;
+    overflow: hidden;
+    background: #eef4f5;
+}
+
+.train-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.modern-train-card:hover .train-image-placeholder img {
+    transform: scale(1.06);
+}
+.modern-trains {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+/* ===============================
+   ABOUT SECTION
+================================ */
+
+.about-section {
+    margin-top: 90px;
+    padding: 70px 8%;
+    background: #e7f1f2;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-content > span {
+    color: #397c7d;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.about-content h2 {
+    color: #102a43;
+    font-size: 36px;
+    margin: 12px 0 20px;
+}
+
+.about-content p {
+    color: #526872;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin-bottom: 15px;
+}
+
+
+/* ABOUT FEATURES */
+
+.about-features {
+    display: grid;
+    gap: 15px;
+}
+
+.about-features > div {
+    background: #e7f1f2;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #d5e1e5;
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    column-gap: 15px;
+    align-items: center;
+}
+
+.about-features span {
+    grid-row: span 2;
+
+    width: 45px;
+    height: 45px;
+
+    display: grid;
+    place-items: center;
+
+    background: #e4f0f1;
+    border-radius: 10px;
+
+    font-size: 20px;
+}
+
+.about-features h3 {
+    color: #17324d;
+    font-size: 15px;
+}
+
+.about-features p {
+    color: #71828b;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+
+/* ===============================
+   FOOTER
+================================ */
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #c7d6dc;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+
+/* ===============================
+   ABOUT MOBILE
+================================ */
+
+@media (max-width: 900px) {
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .about-section {
+        padding: 55px 7%;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+/* ===============================
+   ABOUT ALFISHA
+================================ */
+
+.about-section {
+    width: 88%;
+    max-width: 1150px;
+    margin: 90px auto;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 55px;
+
+    align-items: center;
+}
+
+
+/* ABOUT IMAGE */
+
+.about-image {
+    height: 430px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(16, 42, 67, 0.15);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ABOUT TEXT */
+
+.about-content > span {
+    color: #397c7d;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.about-content h2 {
+    color: #102a43;
+    font-size: 38px;
+    line-height: 1.15;
+    margin: 12px 0 20px;
+}
+
+.about-content > p {
+    color: #62747c;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+
+/* ABOUT FEATURES */
+
+.about-features {
+    display: grid;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.about-features > div {
+    background: #e7f1f2;
+    border: 1px solid #d5e1e5;
+    border-radius: 11px;
+
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    transition: 0.2s;
+}
+
+.about-features > div:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 18px rgba(16, 42, 67, 0.10);
+}
+
+.about-features > div > span {
+    min-width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    background: white;
+    border-radius: 9px;
+
+    font-size: 19px;
+}
+
+.about-features h3 {
+    color: #17324d;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.about-features p {
+    color: #71828b;
+    font-size: 12px;
+}
+
+
+/* ABOUT MOBILE */
+
+@media (max-width: 900px) {
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image {
+        height: 320px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .about-section {
+        width: 86%;
+        margin: 65px auto;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+    .about-image {
+        height: 250px;
+    }
+
+}
+/* ===============================
+   ABOUT SECTION
+================================ */
+
+.about-section {
+    width: 88%;
+    max-width: 1150px;
+    margin: 90px auto;
+    padding: 35px;
+    background: #ffffff;
+    border: 1px solid #dce5e8;
+    border-radius: 16px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+
+    box-shadow: 0 8px 25px rgba(16, 42, 67, 0.10);
+}
+
+.about-image {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.about-content > span {
+    color: #397c7d;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.about-content h2 {
+    color: #102a43;
+    font-size: 32px;
+    line-height: 1.2;
+    margin: 12px 0 18px;
+}
+
+.about-content p {
+    color: #687a82;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .about-section {
+        grid-template-columns: 1fr;
+        padding: 22px;
+        gap: 25px;
+    }
+
+    .about-image img {
+        height: 230px;
+    }
+
+    .about-content h2 {
+        font-size: 27px;
+    }
+}
+</section>
+/* ===============================
+   SITE FOOTER
+================================ */
+
+.site-footer {
+    margin-top: 90px;
+    background: #081e30;
+    color: white;
+}
+
+.footer-container {
+    width: 88%;
+    max-width: 1150px;
+    margin: auto;
+    padding: 55px 0 45px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+    gap: 45px;
+}
+
+
+/* FOOTER BRAND */
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo > span {
+    font-size: 34px;
+}
+
+.footer-logo h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.footer-logo p {
+    margin-top: 3px;
+    color: #9fc1ca;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.footer-description {
+    max-width: 280px;
+    margin-top: 18px;
+    color: #b9cbd2;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* FOOTER COLUMNS */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-column h3 {
+    color: #ffffff;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: #b9cbd2;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.footer-column a:hover {
+    color: #9dc9cb;
+    transform: translateX(3px);
+}
+
+.footer-column p {
+    color: #b9cbd2;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* COPYRIGHT */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-bottom p {
+    color: #8fa8b2;
+    font-size: 12px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    .footer-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+/* ===============================
+   QUICK SERVICES - FINAL DESIGN
+================================ */
+
+.services-section {
+    background-color: transparent;
+    padding: 70px 6%;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.services-section .section-heading {
+    max-width: 1150px;
+    margin: 0 auto 30px;
+}
+
+.service-grid {
+    width: 100%;
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.service-card {
+    min-height: 125px;
+    padding: 20px;
+
+    background: #ffffff;
+    border: 1px solid #dce5e8;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    transition: 0.25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(16, 42, 67, 0.12);
+}
+
+.service-icon {
+    min-width: 42px;
+    height: 42px;
+    font-size: 18px;
+}
+
+.service-card h3 {
+    font-size: 14px;
+}
+
+.service-card p {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.service-arrow {
+    font-size: 16px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ===============================
+   REMOVE BIG QUICK SERVICES BOX
+================================ */
+
+.services-section {
+    width: 88%;
+    max-width: 1150px;
+    margin: 80px auto 0;
+    padding: 0;
+    background: transparent;
+}
+
+.services-section .section-heading {
+    margin-bottom: 28px;
+}
+
+.service-grid {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    background: transparent;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.service-card {
+    background: #ffffff;
+    border: 1px solid #dce5e8;
+    border-radius: 12px;
+}
+body {
+    background-image:
+        linear-gradient(
+            rgba(8, 30, 48, 0.88),
+            rgba(8, 30, 48, 0.88)
+        ),
+        url("images/railway.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* SOFT LIGHT BACKGROUND */
+
+.services-section,
+.popular-section,
+.about-section {
+    background: linear-gradient(
+        180deg,
+        #eef4f5,
+        #f8fafb
+    );
+}
+/* =================================
+   FINAL LIGHT HOME PAGE BACKGROUND
+================================= */
+
+body {
+    background: #d8e5e9!important;
+}
+
+/* Sections below hero */
+.services-section,
+.popular-section,
+.about-section {
+    background: #d8e5e9 !important;
+}
+
+/* Keep the hero railway image */
+.home-hero {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(8, 30, 48, 0.60),
+            rgba(8, 30, 48, 0.35),
+            rgba(8, 30, 48, 0.15)
+        ),
+        url("images/railway.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* ===============================
+   QUICK SERVICES CARD TONE
+================================ */
+
+.service-card {
+    background: #dbe7eb !important;
+    border: 1px solid #c2d3d8;
+}
+
+.service-card:hover {
+    background: #d2e1e5 !important;
+    box-shadow: 0 10px 25px rgba(16, 42, 67, 0.14);
+}
+
+.service-icon {
+    background: #c8dce1;
+}
+/* ===============================
+   POPULAR TRAIN CARD TONE
+================================ */
+
+.modern-train-card {
+    background: #dbe7eb !important;
+    border: 1px solid #c2d3d8;
+}
+
+.modern-train-card:hover {
+    background: #d2e1e5 !important;
+    box-shadow: 0 12px 28px rgba(16, 42, 67, 0.16);
+}
+
+.train-image-placeholder {
+    background: #c8dce1 !important;
+}
+
+.train-info span {
+    background: #d0e0e4;
+}
+/* ===============================
+   BOOK TICKETS PAGE
+================================ */
+
+.search-form {
+    background: #dbe7eb !important;
+    border: 1px solid #c2d3d8;
+    box-shadow: 0 8px 25px rgba(16, 42, 67, 0.10);
+}
+
+.search-form .input-group input,
+.search-form .input-group select {
+    background: #edf4f6 !important;
+    border: 1px solid #b9cbd1;
+    color: #17324d;
+}
+
+.search-form .input-group input::placeholder {
+    color: #71828b;
+}
+
+.search-form .input-group label {
+    color: #245b7a;
+}
+
+/* Search button */
+
+.search-form button {
+    background: #2f6f7e;
+}
+
+.search-form button:hover {
+    background: #245968;
+}
+
+/* Train search result */
+
+.train-result {
+    background: #dbe7eb !important;
+    border: 1px solid #c2d3d8;
+    border-left: 5px solid #3d7c7a;
+    box-shadow: 0 8px 20px rgba(16, 42, 67, 0.10);
+}
+
+.train-result h3 {
+    color: #17324d;
+}
+
+.train-result p {
+    color: #526872;
+}
+/* ===============================
+   BOOK TICKETS LAYOUT
+================================ */
+
+.booking-hero {
+    max-width: 1150px;
+    margin: 45px auto;
+    padding: 25px;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.4fr;
+    gap: 35px;
+    align-items: center;
+
+    background: #dbe7eb;
+    border: 1px solid #c2d3d8;
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(16, 42, 67, 0.10);
+}
+
+
+/* IMAGE */
+
+.booking-image {
+    height: 390px;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.booking-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* CONTENT */
+
+.booking-content {
+    padding: 15px;
+}
+
+.booking-content > span {
+    color: #397c7d;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.booking-content h2 {
+    margin: 8px 0 10px;
+    color: #17324d;
+    font-size: 30px;
+}
+
+.booking-content > p {
+    color: #596b73;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+
+/* FORM */
+
+.booking-content .search-form {
+    padding: 0;
+    background: transparent !important;
+    border: none;
+    box-shadow: none;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.booking-content .search-form button {
+    grid-column: 1 / -1;
+    width: 200px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .booking-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-image {
+        height: 230px;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .booking-content .search-form {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-content .search-form button {
+        grid-column: auto;
+        width: 100%;
+    }
+
+}
+/* ===============================
+   PNR TICKET BRAND
+================================ */
+
+.ticket-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.ticket-icon {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+
+    background: #dce8ec;
+    border-radius: 10px;
+
+    font-size: 27px;
+}
+
+.ticket-brand h2 {
+    margin-bottom: 5px;
+}
+
+.ticket-brand p {
+    color: #dce8ec;
+}
+/* ===============================
+   MEALS PAGE
+================================ */
+
+.meals-page {
+    width: 88%;
+    max-width: 1150px;
+    margin: 55px auto;
+}
+
+.meals-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.meals-heading > span {
+    color: #397c7d;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.meals-heading h2 {
+    color: #17324d;
+    font-size: 32px;
+    margin: 8px 0;
+}
+
+.meals-heading p {
+    color: #596b73;
+    font-size: 14px;
+}
+
+.meal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.meal-card {
+    overflow: hidden;
+    background: #dbe7eb;
+    border: 1px solid #c2d3d8;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(16, 42, 67, 0.10);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.meal-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(16, 42, 67, 0.15);
+}
+
+.meal-image {
+    height: 170px;
+    overflow: hidden;
+}
+
+.meal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.meal-card h3 {
+    color: #17324d;
+    font-size: 19px;
+    margin: 20px 15px 8px;
+}
+
+.meal-card p {
+    color: #596b73;
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 0 18px;
+}
+
+.meal-card strong {
+    display: block;
+    color: #245b7a;
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.meal-card button {
+    margin-bottom: 22px;
+    padding: 11px 22px;
+    background: #2f6f7e;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.meal-card button:hover {
+    background: #245968;
+}
+
+@media (max-width: 900px) {
+    .meal-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .meal-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ===============================
+   CONTACT PAGE
+================================ */
+
+.contact-page {
+    width: 88%;
+    max-width: 1150px;
+    margin: 55px auto;
+}
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-heading > span {
+    color: #397c7d;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.contact-heading h2 {
+    color: #17324d;
+    font-size: 32px;
+    margin: 8px 0;
+}
+
+.contact-heading p {
+    color: #596b73;
+    font-size: 14px;
+}
+
+
+/* MAIN CONTACT BOX */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 25px;
+}
+
+
+/* CONTACT INFORMATION */
+
+.contact-info {
+    background: #dbe7eb;
+    border: 1px solid #c2d3d8;
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 7px 20px rgba(16, 42, 67, 0.10);
+}
+
+.contact-info h3,
+.contact-form h3 {
+    color: #17324d;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.contact-info > p {
+    color: #596b73;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+/* CONTACT ITEMS */
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #c2d3d8;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-item > span {
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    background: #c8dce1;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.contact-item small {
+    display: block;
+    color: #71828b;
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+
+.contact-item strong {
+    color: #245b7a;
+    font-size: 14px;
+}
+
+
+/* CONTACT FORM */
+
+.contact-form {
+    background: #dbe7eb;
+    border: 1px solid #c2d3d8;
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 7px 20px rgba(16, 42, 67, 0.10);
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #b9cbd1;
+    border-radius: 8px;
+    background: #edf4f6;
+    color: #17324d;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    outline: none;
+    border-color: #397c7d;
+}
+
+#contactForm textarea {
+    resize: vertical;
+}
+
+#contactForm button {
+    width: 180px;
+    padding: 12px;
+    margin-top: 5px;
+    background: #2f6f7e;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#contactForm button:hover {
+    background: #245968;
+}
+
+
+/* SUCCESS MESSAGE */
+
+#contactMessage {
+    margin-top: 15px;
+    color: #397c7d;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 25px;
+    }
+}
+/* =========================================
+   LOGIN PAGE
+========================================= */
+
+.login-page {
+    width: 92%;
+    max-width: 1100px;
+    margin: 50px auto 70px;
+}
+
+
+/* =========================================
+   LOGIN CARD
+========================================= */
+
+.login-card {
+    display: grid;
+    grid-template-columns: 48% 52%;
+
+    min-height: 500px;
+
+    background: rgba(219, 231, 235, 0.97);
+
+    border: 1px solid #c2d3d8;
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 12px 30px rgba(16, 42, 67, 0.14);
+}
+
+
+/* =========================================
+   LEFT - LOGIN DETAILS
+========================================= */
+
+.login-form-area {
+    padding: 55px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* LOGIN ICON */
+
+.login-icon {
+    width: 52px;
+    height: 52px;
+
+    display: grid;
+    place-items: center;
+
+    background: #c8dce1;
+
+    border-radius: 12px;
+
+    font-size: 24px;
+
+    margin-bottom: 18px;
+}
+
+
+/* HEADING */
+
+.login-form-area h2 {
+    color: #17324d;
+
+    font-size: 30px;
+
+    margin: 0 0 8px;
+}
+
+
+/* SUBTITLE */
+
+.login-subtitle {
+    color: #596b73;
+
+    font-size: 13px;
+
+    margin: 0 0 28px;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.login-input {
+    margin-bottom: 18px;
+}
+
+.login-input label {
+    display: block;
+
+    color: #245b7a;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+.login-input input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px 14px;
+
+    border: 1px solid #b9cbd1;
+
+    border-radius: 8px;
+
+    background: #edf4f6;
+
+    color: #17324d;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.login-input input::placeholder {
+    color: #87979d;
+}
+
+.login-input input:focus {
+    outline: none;
+
+    border-color: #397c7d;
+
+    background: #f4f8f9;
+
+    box-shadow: 0 0 0 2px rgba(57, 124, 125, 0.10);
+}
+
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.login-submit {
+    width: 100%;
+
+    padding: 13px;
+
+    background: #2f6f7e;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.login-submit:hover {
+    background: #245968;
+}
+
+
+/* =========================================
+   OR DIVIDER
+========================================= */
+
+.login-divider {
+    text-align: center;
+
+    margin: 19px 0;
+
+    color: #71828b;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   SIGN UP BUTTON
+========================================= */
+
+.signup-btn {
+    width: 100%;
+
+    padding: 12px;
+
+    background: transparent;
+
+    color: #245b7a;
+
+    border: 1px solid #397c7d;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.signup-btn:hover {
+    background: #c8dce1;
+}
+
+
+/* LOGIN MESSAGE */
+
+#loginMessage {
+    text-align: center;
+
+    margin-top: 14px;
+
+    color: #397c7d;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   RIGHT - TRAIN IMAGE SLIDER
+========================================= */
+
+.login-slider {
+    position: relative;
+
+    height: 440px;
+
+    margin: 30px;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    background: #c7d5d9;
+}
+
+
+/* IMAGE */
+
+.login-slider img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    opacity: 1;
+
+    transition: opacity 0.6s ease;
+}
+
+
+/* =========================================
+   IMAGE OVERLAY
+========================================= */
+
+.slider-overlay {
+    position: absolute;
+
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+
+    padding: 18px 20px;
+
+    border-radius: 10px;
+
+    background: rgba(16, 42, 67, 0.62);
+
+    color: white;
+}
+
+.slider-overlay span {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #c8e1e2;
+
+    font-weight: bold;
+}
+
+.slider-overlay h3 {
+    color: white;
+
+    font-size: 23px;
+
+    margin: 7px 0 5px;
+}
+
+.slider-overlay p {
+    color: #e0eaed;
+
+    font-size: 12px;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   LOGIN PAGE BACKGROUND
+========================================= */
+
+body {
+    background:
+        linear-gradient(
+            rgba(235, 243, 245, 0.91),
+            rgba(235, 243, 245, 0.91)
+        ),
+        url("images/railway.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+}
+/* =========================================
+   FINAL LOGIN PAGE FIX
+========================================= */
+
+.login-page {
+    width: 92% !important;
+    max-width: 1100px !important;
+    margin: 50px auto 70px !important;
+}
+
+.login-page .login-card {
+    width: 100% !important;
+    max-width: none !important;
+
+    display: grid !important;
+    grid-template-columns: 48% 52% !important;
+
+    min-height: 500px !important;
+    height: 500px !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    background: rgba(219, 231, 235, 0.97) !important;
+
+    border: 1px solid #c2d3d8 !important;
+    border-radius: 20px !important;
+
+    overflow: hidden !important;
+
+    box-shadow: 0 12px 30px rgba(16, 42, 67, 0.14) !important;
+}
+
+
+/* =========================================
+   LEFT LOGIN DETAILS
+========================================= */
+
+.login-page .login-form-area {
+    width: auto !important;
+    padding: 50px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================
+   RIGHT IMAGE AREA
+========================================= */
+
+.login-page .login-slider {
+    width: auto !important;
+    height: 440px !important;
+
+    margin: 30px !important;
+
+    position: relative !important;
+
+    border-radius: 16px !important;
+    overflow: hidden !important;
+
+    background: #c7d5d9 !important;
+}
+
+.login-page .login-slider img {
+    width: 100% !important;
+    height: 100% !important;
+
+    min-width: 100% !important;
+    min-height: 100% !important;
+
+    display: block !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+
+/* =========================================
+   RIGHT IMAGE TEXT
+========================================= */
+
+.login-page .slider-overlay {
+    position: absolute !important;
+
+    left: 20px !important;
+    right: 20px !important;
+    bottom: 20px !important;
+
+    padding: 18px !important;
+
+    border-radius: 10px !important;
+
+    background: rgba(16, 42, 67, 0.60) !important;
+
+    color: white !important;
+}
+
+
+/* =========================================
+   LOGIN INPUTS
+========================================= */
+
+.login-page .login-input input {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .login-page .login-card {
+        grid-template-columns: 1fr !important;
+        height: auto !important;
+    }
+
+    .login-page .login-slider {
+        height: 300px !important;
+        order: -1 !important;
+    }
+
+    .login-page .login-form-area {
+        padding: 35px !important;
+    }
+
+}
+/* ===============================
+   ABOUT IMAGE SLIDER
+================================ */
+
+.about-slider {
+    width: 100%;
+    height: 320px;
+
+    border-radius: 16px;
+    overflow: hidden;
+
+    background: #dbe7eb;
+}
+
+.about-slider img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+
+    opacity: 1;
+
+    transition: opacity 0.7s ease;
+}
+/* =================================
+   TRAIN SEARCH RESULTS
+================================= */
+
+#trainResults {
+    width: 90%;
+    max-width: 1000px;
+    margin: 35px auto;
+}
+
+.train-result-card {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    align-items: center;
+    gap: 25px;
+
+    padding: 25px;
+
+    background: #dbe7eb;
+
+    border: 1px solid #c2d3d8;
+    border-radius: 14px;
+
+    box-shadow: 0 6px 18px rgba(16, 42, 67, 0.08);
+}
+
+.train-result-info h3 {
+    margin: 0 0 8px;
+
+    color: #17324d;
+}
+
+.train-result-info p {
+    margin: 5px 0;
+
+    color: #397c7d;
+    font-weight: 600;
+}
+
+.train-result-info span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #667980;
+    font-size: 12px;
+}
+
+.train-time {
+    text-align: center;
+}
+
+.train-time strong {
+    display: block;
+
+    color: #17324d;
+    font-size: 17px;
+}
+
+.train-time span {
+    color: #71828b;
+    font-size: 11px;
+}
+
+.select-train-btn {
+    padding: 11px 18px;
+
+    background: #2f6f7e;
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+.select-train-btn:hover {
+    background: #245968;
+}
+
+.search-error {
+    text-align: center;
+
+    color: #b04a4a;
+    font-weight: 600;
+}
+/* ===============================
+   TRAIN SEARCH RESULT
+================================ */
+
+#trainResults {
+    width: 90%;
+    max-width: 1000px;
+    margin: 35px auto 60px;
+}
+
+.train-result {
+    background: #e8f0f1;
+    border: 1px solid #c5d8da;
+    border-radius: 18px;
+    padding: 28px 35px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    animation: resultAppear 0.4s ease;
+}
+
+.train-result h3 {
+    color: #245f63;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.train-result p {
+    margin: 10px 0;
+    color: #455b5d;
+}
+
+.train-result button {
+    margin-top: 15px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    background: #246b70;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.train-result button:hover {
+    background: #1b5559;
+    transform: translateY(-2px);
+}
+
+@keyframes resultAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =================================
+   TRAIN SEARCH RESULT
+================================= */
+
+#trainResults {
+    width: 90%;
+    max-width: 1050px;
+    margin: 35px auto 60px;
+}
+
+.train-result {
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    border: 1px solid #dbe5e6;
+    animation: resultSlide 0.4s ease;
+}
+
+.train-result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.train-result-header span {
+    font-size: 12px;
+    color: #3d7c7a;
+    letter-spacing: 1px;
+}
+
+.train-result-header h3 {
+    margin: 6px 0 0;
+    font-size: 25px;
+    color: #173f43;
+}
+
+.train-status {
+    color: #26734d;
+    background: #e3f5ea;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.train-route {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 20px 0;
+    border-top: 1px solid #e5eeee;
+    border-bottom: 1px solid #e5eeee;
+}
+
+.train-route div {
+    display: flex;
+    flex-direction: column;
+}
+
+.train-route small,
+.train-details small {
+    font-size: 11px;
+    color: #7b8c8d;
+    margin-bottom: 6px;
+}
+
+.train-route strong {
+    font-size: 20px;
+    color: #234b4e;
+}
+
+.route-arrow {
+    font-size: 25px;
+    color: #3d7c7a;
+}
+
+.train-details {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 25px 0;
+}
+
+.train-details div {
+    display: flex;
+    flex-direction: column;
+}
+
+.train-details strong {
+    color: #304e50;
+    font-size: 14px;
+}
+
+.book-train-button {
+    padding: 13px 28px;
+    border: none;
+    border-radius: 8px;
+    background: #246b70;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.book-train-button:hover {
+    background: #1b5559;
+    transform: translateY(-2px);
+}
+
+.search-error {
+    text-align: center;
+    padding: 20px;
+    color: #b33a3a;
+}
+
+@keyframes resultSlide {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* LAPTOP */
+@media (max-width: 900px) {
+
+    .train-details {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .train-result {
+        padding: 20px;
+    }
+
+    .train-result-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .train-route {
+        gap: 15px;
+    }
+
+    .train-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+.seat-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    color: #245f63;
+}
+
+.seat-title::first-letter {
+    font-size: 28px;
+}
+/* =================================
+   SELECTED SEAT
+================================= */
+
+.seat {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.seat:hover {
+    transform: scale(1.08);
+}
+
+.seat.selected {
+    background: #245f63 !important;
+    color: white !important;
+    border-color: #245f63 !important;
+    transform: scale(1.08);
+}
+
+.seat.booked {
+    cursor: not-allowed;
+}
+/* ==================================
+   SELECTED SEAT
+================================== */
+
+.seat {
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.seat:hover {
+    transform: scale(1.08);
+}
+
+.seat.selected {
+    background: #245f63 !important;
+    color: white !important;
+    border: 2px solid #173f43 !important;
+    transform: scale(1.08);
+}
+
+.seat.booked {
+    cursor: not-allowed;
+}
+/* ================= BOOKING SUCCESS MESSAGE ================= */
+
+.booking-success {
+    display: none;
+    text-align: center;
+    padding: 35px;
+    margin-top: 25px;
+    background: white;
+    border-radius: 10px;
+    border: 2px solid #333;
+}
+
+.success-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #333;
+    color: white;
+    font-size: 38px;
+    line-height: 60px;
+    font-weight: bold;
+}
+
+.booking-success h2 {
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.booking-success p {
+    color: #555;
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.view-booking {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.view-booking:hover {
+    background: #555;
+}
+/* ================= BOOKING SUCCESS MESSAGE ================= */
+
+.booking-success {
+    display: none;
+    text-align: center;
+    padding: 40px 30px;
+    margin-top: 25px;
+    background: white;
+    border-radius: 15px;
+    border: 2px solid #16803c;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Green Tick */
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #16803c;
+    color: white;
+    font-size: 45px;
+    line-height: 70px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Booking Confirmed Heading */
+
+.booking-success h2 {
+    color: #16803c;
+    margin-bottom: 15px;
+}
+
+/* Message */
+
+.booking-success p {
+    color: #333;
+    margin: 8px 0;
+    font-size: 17px;
+}
+
+/* View My Booking Button */
+
+.view-booking {
+    display: block;
+    width: fit-content;
+    margin: 25px auto 0;
+    padding: 13px 28px;
+    background: #16803c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.view-booking:hover {
+    background: #10652f;
+}
+/* ==========================================
+   SERVICES PAGE
+========================================== */
+
+.services-page-header {
+    text-align: center;
+    padding: 70px 20px 40px;
+    background: #eef5f8;
+}
+
+.services-page-header span {
+    color: #16803c;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.services-page-header h2 {
+    margin: 15px 0;
+    font-size: 36px;
+    color: #17324d;
+}
+
+.services-page-header p {
+    font-size: 17px;
+    color: #555;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+
+/* SERVICES CARDS */
+
+.services-page {
+    padding: 50px 8%;
+    background: #eef5f8;
+}
+
+.services-page-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+
+.service-page-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #222;
+    border: 1px solid #dce5e9;
+    transition: 0.3s;
+}
+
+
+.service-page-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    border-color: #16803c;
+}
+
+
+.service-page-icon {
+    width: 60px;
+    height: 60px;
+    background: #e7f5ec;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+
+.service-page-card h3 {
+    color: #17324d;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+
+.service-page-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+
+.service-page-card span {
+    color: #16803c;
+    font-weight: bold;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .services-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .services-page-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-page-header h2 {
+        font-size: 28px;
+    }
+
+}
+
+/* ==========================================
+   TRAIN IMAGE SLIDER IN TITLE
+========================================== */
+
+.train-title-slider {
+    width: 100%;
+    max-width: 850px;
+    height: 180px;
+    margin: 20px auto 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.train-title-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+.train-image-header {
+    width: 100%;
+    height: 5cm;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.train-image-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.5s ease;
+}
+
+/* =====================================
+   FULL SCREEN RAILWAY BACKGROUND
+===================================== */
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* PNR / Contact content area */
+
+.railway-page {
+    min-height: calc(100vh - 80px);
+    padding: 40px 20px;
+
+    background: transparent;
+}
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+.railway-page {
+    background-image: url("./images/background.jpg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+/* =================================
+   COMPACT SEAT TRAIN INFORMATION
+================================= */
+
+.seat-info {
+    width: 88%;
+    max-width: 750px;
+    margin: 15px auto 20px;
+    padding: 14px 20px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #164e63, #287c7a);
+    color: white;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+.train-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.journey-route {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.route-line {
+    color: #d8f3f0;
+    font-size: 11px;
+}
+
+.coach-info {
+    margin-top: 8px;
+    padding-top: 7px;
+    border-top: 1px solid rgba(255,255,255,0.25);
+    font-size: 13px;
+}
+
+/* Keep the seat area compact */
+
+.seat-layout {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .seat-info {
+        width: 90%;
+        padding: 12px 10px;
+    }
+
+    .train-title {
+        font-size: 18px;
+    }
+
+    .journey-route {
+        gap: 6px;
+        font-size: 13px;
+    }
+
+    .route-line {
+        font-size: 9px;
+    }
+
+}
+/* =================================
+   ABOUT THE DEVELOPER
+================================= */
+
+.developer-section {
+    width: 90%;
+    max-width: 1000px;
+    margin: 70px auto;
+}
+
+.developer-card {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    padding: 28px;
+
+    background: #ffffff;
+    border-radius: 22px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+    border-left: 5px solid #287c7a;
+}
+
+.developer-photo {
+    width: 180px;
+    height: 220px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.developer-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center top;
+
+    display: block;
+}
+
+.developer-info span {
+    color: #287c7a;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.developer-info h2 {
+    margin: 8px 0 2px;
+
+    color: #164e63;
+    font-size: 30px;
+}
+
+.developer-info h3 {
+    margin: 0 0 12px;
+
+    color: #287c7a;
+    font-size: 17px;
+}
+
+.developer-info p {
+    margin: 0;
+
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .developer-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .developer-photo {
+        width: 160px;
+        height: 200px;
+    }
+}

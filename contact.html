@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us - Alfisha Railway</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav class="main-nav">
+
+        <div class="brand">
+            <span class="brand-icon">🚆</span>
+
+            <div>
+                <h1>ALFISHA</h1>
+                <p>RAILWAY RESERVATION</p>
+            </div>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+            <a href="search.html">Book Tickets</a>
+            <a href="index.html#services">Services</a>
+            <a href="pnr.html">PNR Status</a>
+            <a href="meals.html">Meals</a>
+            <a href="contact.html" class="active">Contact Us</a>
+
+            <a href="login.html" class="login-btn">
+                Login / Sign Up
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- CONTACT -->
+
+    <main class="contact-page">
+
+        <div class="contact-heading">
+
+            <span>GET IN TOUCH</span>
+
+            <h2>Contact Us</h2>
+
+
+        <div class="contact-container">
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-info">
+
+                <h3>How Can We Help?</h3>
+
+                <p>
+                    Contact us for assistance with bookings,
+                    PNR status, train information and other services.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <span>📞</span>
+
+                    <div>
+                        <small>Customer Support</small>
+                        <strong>1800-123-4567</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>✉️</span>
+
+                    <div>
+                        <small>Email</small>
+                        <strong>support@alfisharailway.com</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>📍</span>
+
+                    <div>
+                        <small>Office</small>
+                        <strong>Railway Information Centre</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form">
+
+                <h3>Send Us a Message</h3>
+
+                <form id="contactForm">
+
+                    <input
+                        type="text"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        placeholder="Your Email"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        placeholder="Subject"
+                        required
+                    >
+
+                    <textarea
+                        placeholder="Write your message..."
+                        rows="5"
+                        required
+                    ></textarea>
+
+                    <button type="submit">
+                        Send Message
+                    </button>
+
+                </form>
+
+                <p id="contactMessage"></p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Alfisha Railway Reservation Information System
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            document.getElementById("contactMessage").textContent =
+                "Thank you! Your message has been received.";
+
+            this.reset();
+
+        });
+
+    </script>
+<script src="script.js"></script>
+</body>
+
+</html>
